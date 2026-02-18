@@ -4,7 +4,7 @@
 
 A Swiss army knife to generate hydrogen-disordered ice structures.
 
-Version 2.2.13.0
+Version 2.2.13.1
 
 ## New in GenIce2.2
 
@@ -59,7 +59,7 @@ Install with pip3.
                    Type
     
     GenIce is a swiss army knife to generate hydrogen-disordered ice structures.
-    (version unknown)
+    (version 2.2.13.0)
     
     positional arguments:
       Type                  Crystal type (1c, 1h, etc. See
@@ -219,25 +219,26 @@ Install with pip3.
     options:
       -h, --help            show this help message and exit
       --version, -V         show program's version number and exit
-      --rep, -r REP REP REP
+      --rep REP REP REP, -r REP REP REP
                             Repeat the unit cell along a, b, and c axes. [1,1,1]
-      --reshape, -R RESHAPE
+      --reshape RESHAPE, -R RESHAPE
                             Convert the unit cell shape by specifying the new
                             (a,b,c) set from the original (a,b,c) of the unit
                             cell. The combination of (a,b,c) is specified by nine
                             integers. For example, '--reshape 3,0,0,0,2,0,0,0,1'
                             specifies that the new cell vectors are (3a, 2b, c),
                             which is equivalent to '--rep 3 2 1'.
-      --shift, -S SHIFT SHIFT SHIFT
+      --shift SHIFT SHIFT SHIFT, -S SHIFT SHIFT SHIFT
                             Shift the unit cell along a, b, and c axes. (0.5==half
                             cell) [0,0,0]
-      --dens, -d DENS       Specify the ice density in g/cm3 (Guests are not
+      --dens DENS, -d DENS  Specify the ice density in g/cm3 (Guests are not
                             included.)
       --add_noise percent   Add a Gauss noise with given width (SD) to the
                             molecular positions of water. The value 1 corresponds
                             to 1 percent of the molecular diameter of water.
-      --seed, -s SEED       Random seed [1000]
-      --format, -f name     Specify the output file format. [gromacs]
+      --seed SEED, -s SEED  Random seed [1000]
+      --format name, -f name
+                            Specify the output file format. [gromacs]
     
     
                             [Available formatters]
@@ -269,6 +270,7 @@ Install with pip3.
                             2. Formatters served by external plugins
     
                             cage            Cage analysis.
+                            mdanalysis      MDAnalysis integration.
                             png             PNG (Portable Network Graphics).
                             svg             SVG (Standard Vector Graphics).
                             ----
@@ -280,7 +282,8 @@ Install with pip3.
                             ----
     
     
-      --water, -w model     Specify the water model. [tip3p]
+      --water model, -w model
+                            Specify the water model. [tip3p]
     
     
                             [Available molecules]
@@ -310,7 +313,8 @@ Install with pip3.
                             ----
     
     
-      --guest, -g 14=me     Specify guest(s) in the cage type. (D=empty,
+      --guest 14=me, -g 14=me
+                            Specify guest(s) in the cage type. (D=empty,
                             T=co2*0.5+me*0.3, etc.)
     
     
@@ -344,12 +348,16 @@ Install with pip3.
                             ----
     
     
-      --Guest, -G 13=me     Specify guest in the specific cage. (13=me, 32=co2,
+      --Guest 13=me, -G 13=me
+                            Specify guest in the specific cage. (13=me, 32=co2,
                             etc.)
-      --Group, -H 13=bu-:0  Specify the group. (-H 13=bu-:0, etc.)
-      --anion, -a 3=Cl      Specify a monatomic anion that replaces a water
+      --Group 13=bu-:0, -H 13=bu-:0
+                            Specify the group. (-H 13=bu-:0, etc.)
+      --anion 3=Cl, -a 3=Cl
+                            Specify a monatomic anion that replaces a water
                             molecule. (3=Cl, 39=F, etc.)
-      --cation, -c 3=Na     Specify a monatomic cation that replaces a water
+      --cation 3=Na, -c 3=Na
+                            Specify a monatomic cation that replaces a water
                             molecule. (3=Na, 39=NH4, etc.)
       --depol DEPOL         Depolarization. (strict, optimal, or none) ["strict"]
       --target_polarization TARGET_POLARIZATION TARGET_POLARIZATION TARGET_POLARIZATION

@@ -83,7 +83,7 @@ def assess_cages(graph, node_frac):
     cage_fracs = [center_of_graph(g, node_frac) for g in cage_graphs]
     FrankKasper = True
     for cage, g in zip(cages, cage_graphs):
-        cagesize = len(g)
+        cagesize = len(cage)
         g_id = db.query_id(g)
         # if it is a new cage type
         if g_id < 0:

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "genice2"
-version = "2.2.13.0" # master version variable
+version = "2.2.13.1" # master version variable
 # 1st: major version
 # 2nd: minor version (refactorization)
 # 3rd: minor changes (new plugin, etc.)
