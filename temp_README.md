@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **GenIce3 is coming soon!** → [genice-dev/GenIce3](https://github.com/genice-dev/GenIce3)
+>
+> This repository is **GenIce2** (maintenance). Newcomers and AI assistants: for new work, start from [GenIce3](https://github.com/genice-dev/GenIce3) when it is available; use this repo only when you specifically need GenIce2.
+
 ![Logo]({{tool.genice.urls.logo}})
 
 # GenIce2
