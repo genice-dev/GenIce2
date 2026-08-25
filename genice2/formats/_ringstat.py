@@ -31,6 +31,10 @@ Columns in the output:
 
 Finally, dKL between expectiations and observations is also shown.
 
+Ideal weights: each bond-orientation pattern on an isolated N-member ring is weighted by
+(rotation/reflection orbit size) times (2^(number of adjacent equal bond directions)).
+The total weight is 3^N + 1 (e.g. 730 for N=6; fractions may appear as */365 after reduction).
+
 % genice2 1h -r 2 2 3 -f _ringstat[max=6]
 
 6 0 000000 64/365 0.17534 66/384 0.17188
@@ -60,7 +64,8 @@ import itertools as it
 
 desc = {
     "ref": {
-        "Hollins1964": "Hollins, G. T. Configurational statistics and the dielectric constant of ice. Proc. Phys. Soc. 84, 1001–1016 (1964)."
+        "MYT2024": "Matsumoto, M., Yagasaki, T., Tanaka, H., GenIce-core. J. Chem. Phys. 160, 094101 (2024).",
+        "Pauling1935": "Pauling, L., The structure and entropy of ice and of other crystals with some randomness of atomic arrangement. J. Am. Chem. Soc. 57, 2680–2684 (1935).",
     },
     "brief": "Bond direction statistics.",
     "usage": __doc__,
